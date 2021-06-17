@@ -32,6 +32,8 @@
 		CE9E4870267A527C00C357E3 /* MovieTraslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E486F267A527C00C357E3 /* MovieTraslator.swift */; };
 		CE9E4872267AAE1900C357E3 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9E4871267AAE1900C357E3 /* CartTableViewCell.swift */; };
 		CEC81608267B76B500AC1ECF /* CartTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC81607267B76B500AC1ECF /* CartTableViewCellDelegate.swift */; };
+		CECB0359267B9193001A6750 /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = CECB0358267B9193001A6750 /* Preferences.plist */; };
+		CECB035B267B92F3001A6750 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECB035A267B92F3001A6750 /* Preferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		CE9E486F267A527C00C357E3 /* MovieTraslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTraslator.swift; sourceTree = "<group>"; };
 		CE9E4871267AAE1900C357E3 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		CEC81607267B76B500AC1ECF /* CartTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		CECB0358267B9193001A6750 /* Preferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preferences.plist; sourceTree = "<group>"; };
+		CECB035A267B92F3001A6750 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 				CE9E48302678D34C00C357E3 /* Assets.xcassets */,
 				CE9E48322678D34C00C357E3 /* LaunchScreen.storyboard */,
 				CE9E48352678D34C00C357E3 /* Info.plist */,
+				CECB0358267B9193001A6750 /* Preferences.plist */,
 			);
 			path = MoviesMVC;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9E484F26790ADA00C357E3 /* Networking.swift */,
+				CECB035A267B92F3001A6750 /* Preferences.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECB0359267B9193001A6750 /* Preferences.plist in Resources */,
 				CE9E48342678D34C00C357E3 /* LaunchScreen.storyboard in Resources */,
 				CE9E48312678D34C00C357E3 /* Assets.xcassets in Resources */,
 			);
@@ -331,6 +338,7 @@
 				CE9E4869267A4F2E00C357E3 /* MovieEntity.swift in Sources */,
 				CE9E48282678D34A00C357E3 /* AppDelegate.swift in Sources */,
 				CE9E4872267AAE1900C357E3 /* CartTableViewCell.swift in Sources */,
+				CECB035B267B92F3001A6750 /* Preferences.swift in Sources */,
 				CE9E485F2679441100C357E3 /* MovieDetailView.swift in Sources */,
 				CE9E4870267A527C00C357E3 /* MovieTraslator.swift in Sources */,
 				CE9E484D267905E600C357E3 /* CartViewController.swift in Sources */,

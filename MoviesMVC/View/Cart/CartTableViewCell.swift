@@ -118,7 +118,7 @@ class CartTableViewCell: UITableViewCell {
     }
     
     func downloadImage(movie: Movie){
-        let url = URL(string: "https://image.tmdb.org/t/p/w500\(movie.posterPath)")
+        let url = URL(string: "\(Networking().preferences?.baseUrlImage ?? "")\(movie.posterPath)")
         
         movieImage.kf.setImage(with: url)
         movieImage.kf.indicatorType = .activity
