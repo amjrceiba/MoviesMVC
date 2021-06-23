@@ -9,11 +9,12 @@ import Foundation
 
 public struct Movie: Codable {
     let adult: Bool
-    let backdropPath: String
+    let backdropPath: String?
     let id: Int
     let originalTitle, overview: String
     let popularity: Double
-    let posterPath, releaseDate, title: String
+    let posterPath, title: String
+    let releaseDate:String?
     let video: Bool
     let voteAverage: Double
     let voteCount: Int

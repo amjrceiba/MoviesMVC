@@ -41,28 +41,23 @@ class MovieDetailViewController: ViewController<MovieDetailView> {
     
     @objc
     func barButtonTapped(){
-        movieExist ? removeMovie() : addMovie()
+        do{
+            movieExist ? try removeMovie() : try addMovie()
+        }
+        catch{
+            showErrorAlert(title: "Error", message: error.localizedDescription)
+        }
         
         self.notifyObserver()
         self.popView()
     }
     
-    func addMovie(){
-        do{
-            try DBController().addMovie(movie: movie)
-        }
-        catch{
-            showErrorAlert(title: "Error", message: error.localizedDescription)
-        }
+    func addMovie()throws{
+        try DBController().addMovie(movie: movie)
     }
     
-    func removeMovie(){
-        do{
-            try DBController().removeMovie(movie: movie)
-        }
-        catch{
-            showErrorAlert(title: "Error", message: error.localizedDescription)
-        }
+    func removeMovie()throws{
+        try DBController().removeMovie(movie: movie)
     }
     
     func popView(){

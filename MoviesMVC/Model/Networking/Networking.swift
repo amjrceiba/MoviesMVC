@@ -27,9 +27,7 @@ public class Networking {
             if (response.error != nil){
                 return
             }
-            
-            print(response)
-            
+                        
             let json = JSON(response.data!)
             let data = json["results"].array
             let movies = try! JSONDecoder().decode([Movie].self, from: JSON(data!).rawData())

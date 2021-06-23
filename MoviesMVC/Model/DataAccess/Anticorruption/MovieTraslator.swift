@@ -13,13 +13,13 @@ class MovieTraslator {
         let movieEntity = MovieEntity()
         
         movieEntity.adult = movie.adult
-        movieEntity.backdropPath = movie.backdropPath
+        movieEntity.backdropPath = movie.backdropPath ?? ""
         movieEntity.id = movie.id
         movieEntity.originalTitle = movie.originalTitle
         movieEntity.overview = movie.overview
         movieEntity.popularity = movie.popularity
         movieEntity.posterPath = movie.posterPath
-        movieEntity.releaseDate = movie.releaseDate
+        movieEntity.releaseDate = movie.releaseDate ?? ""
         movieEntity.title = movie.title
         movieEntity.video = movie.video
         movieEntity.voteAverage = movie.voteAverage
@@ -29,7 +29,7 @@ class MovieTraslator {
     }
     
     func entityToModel(movieEntity: MovieEntity)->Movie{
-        let movie = Movie(adult: movieEntity.adult, backdropPath: movieEntity.backdropPath, id: movieEntity.id, originalTitle: movieEntity.originalTitle, overview: movieEntity.overview, popularity: movieEntity.popularity, posterPath: movieEntity.posterPath, releaseDate: movieEntity.releaseDate, title: movieEntity.title, video: movieEntity.video, voteAverage: movieEntity.voteAverage, voteCount: movieEntity.voteCount)
+        let movie = Movie(adult: movieEntity.adult, backdropPath: movieEntity.backdropPath, id: movieEntity.id, originalTitle: movieEntity.originalTitle, overview: movieEntity.overview, popularity: movieEntity.popularity, posterPath: movieEntity.posterPath, title: movieEntity.title, releaseDate: movieEntity.releaseDate, video: movieEntity.video, voteAverage: movieEntity.voteAverage, voteCount: movieEntity.voteCount)
         return movie
     }
     
