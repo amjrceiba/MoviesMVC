@@ -103,7 +103,7 @@ class CartTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setImageConstraints(){
+    private func setImageConstraints(){
         let imageViewWidthConstraint = NSLayoutConstraint(item: movieImage, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 80)
         let imageViewHeightConstraint = NSLayoutConstraint(item: movieImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 100)
         movieImage.addConstraints([imageViewWidthConstraint, imageViewHeightConstraint])
@@ -117,7 +117,7 @@ class CartTableViewCell: UITableViewCell {
         downloadImage(movie: movie)
     }
     
-    func downloadImage(movie: Movie){
+    private func downloadImage(movie: Movie){
         let url = URL(string: "\(Networking().preferences?.baseUrlImage ?? "")\(movie.posterPath)")
         
         movieImage.kf.setImage(with: url)

@@ -79,6 +79,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE824C4D2683E97500C1D218 /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				CE824C4F2683E98B00C1D218 /* Model */,
+				CE824C502683E98F00C1D218 /* View */,
+				CE824C512683E99300C1D218 /* Controller */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		CE824C4E2683E97C00C1D218 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				CE824C522683E99800C1D218 /* Model */,
+				CE824C532683E99C00C1D218 /* View */,
+				CE824C542683E9A100C1D218 /* Controller */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		CE824C4F2683E98B00C1D218 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E485A2679305900C357E3 /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE824C502683E98F00C1D218 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E48412678D93600C357E3 /* MoviesView.swift */,
+				CE9E485126790BC200C357E3 /* MovieTableViewCell.swift */,
+				CE9E485E2679441100C357E3 /* MovieDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE824C512683E99300C1D218 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E483E2678D8FF00C357E3 /* MoviesViewController.swift */,
+				CE9E485C267943E300C357E3 /* MovieDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE824C522683E99800C1D218 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CEC81607267B76B500AC1ECF /* CartTableViewCellDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE824C532683E99C00C1D218 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E484A267905BB00C357E3 /* CartView.swift */,
+				CE9E4871267AAE1900C357E3 /* CartTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE824C542683E9A100C1D218 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E484C267905E600C357E3 /* CartViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE824C552683EA6800C1D218 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CE824C562683EB2900C1D218 /* Controller */,
+				CE9E4863267A4EBB00C357E3 /* DataAccess */,
+				CE9E484E26790AC500C357E3 /* Networking */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CE824C562683EB2900C1D218 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE9E482B2678D34A00C357E3 /* ViewController.swift */,
+				CE9E48432678EEF200C357E3 /* TabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		CE9E481B2678D34A00C357E3 = {
 			isa = PBXGroup;
 			children = (
@@ -98,9 +189,9 @@
 		CE9E48262678D34A00C357E3 /* MoviesMVC */ = {
 			isa = PBXGroup;
 			children = (
-				CE9E483B2678D87700C357E3 /* Model */,
-				CE9E483C2678D87B00C357E3 /* View */,
-				CE9E483D2678D88100C357E3 /* Controller */,
+				CE824C552683EA6800C1D218 /* Shared */,
+				CE824C4E2683E97C00C1D218 /* Cart */,
+				CE824C4D2683E97500C1D218 /* Movies */,
 				CE9E48272678D34A00C357E3 /* AppDelegate.swift */,
 				CE9E48292678D34A00C357E3 /* SceneDelegate.swift */,
 				CE9E48302678D34C00C357E3 /* Assets.xcassets */,
@@ -111,81 +202,6 @@
 			path = MoviesMVC;
 			sourceTree = "<group>";
 		};
-		CE9E483B2678D87700C357E3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				CE9E4863267A4EBB00C357E3 /* DataAccess */,
-				CE9E484E26790AC500C357E3 /* Networking */,
-				CEC81606267B769900AC1ECF /* Cart */,
-				CE9E48592679304D00C357E3 /* Movie */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		CE9E483C2678D87B00C357E3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				CE9E48462679057500C357E3 /* Cart */,
-				CE9E48452678F81700C357E3 /* Movies */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		CE9E483D2678D88100C357E3 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				CE9E48492679059600C357E3 /* Cart */,
-				CE9E48472679057D00C357E3 /* Movies */,
-				CE9E48482679058A00C357E3 /* Core */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		CE9E48452678F81700C357E3 /* Movies */ = {
-			isa = PBXGroup;
-			children = (
-				CE9E48412678D93600C357E3 /* MoviesView.swift */,
-				CE9E485126790BC200C357E3 /* MovieTableViewCell.swift */,
-				CE9E485E2679441100C357E3 /* MovieDetailView.swift */,
-			);
-			path = Movies;
-			sourceTree = "<group>";
-		};
-		CE9E48462679057500C357E3 /* Cart */ = {
-			isa = PBXGroup;
-			children = (
-				CE9E484A267905BB00C357E3 /* CartView.swift */,
-				CE9E4871267AAE1900C357E3 /* CartTableViewCell.swift */,
-			);
-			path = Cart;
-			sourceTree = "<group>";
-		};
-		CE9E48472679057D00C357E3 /* Movies */ = {
-			isa = PBXGroup;
-			children = (
-				CE9E483E2678D8FF00C357E3 /* MoviesViewController.swift */,
-				CE9E485C267943E300C357E3 /* MovieDetailViewController.swift */,
-			);
-			path = Movies;
-			sourceTree = "<group>";
-		};
-		CE9E48482679058A00C357E3 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				CE9E482B2678D34A00C357E3 /* ViewController.swift */,
-				CE9E48432678EEF200C357E3 /* TabBarController.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		CE9E48492679059600C357E3 /* Cart */ = {
-			isa = PBXGroup;
-			children = (
-				CE9E484C267905E600C357E3 /* CartViewController.swift */,
-			);
-			path = Cart;
-			sourceTree = "<group>";
-		};
 		CE9E484E26790AC500C357E3 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,14 +209,6 @@
 				CECB035A267B92F3001A6750 /* Preferences.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		CE9E48592679304D00C357E3 /* Movie */ = {
-			isa = PBXGroup;
-			children = (
-				CE9E485A2679305900C357E3 /* Movie.swift */,
-			);
-			path = Movie;
 			sourceTree = "<group>";
 		};
 		CE9E4863267A4EBB00C357E3 /* DataAccess */ = {
@@ -227,22 +235,6 @@
 				CE9E4868267A4F2E00C357E3 /* MovieEntity.swift */,
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		CEC81606267B769900AC1ECF /* Cart */ = {
-			isa = PBXGroup;
-			children = (
-				CEC81609267B76D700AC1ECF /* Delegate */,
-			);
-			path = Cart;
-			sourceTree = "<group>";
-		};
-		CEC81609267B76D700AC1ECF /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				CEC81607267B76B500AC1ECF /* CartTableViewCellDelegate.swift */,
-			);
-			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

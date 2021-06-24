@@ -10,8 +10,8 @@ import UIKit
 
 class MovieDetailViewController: ViewController<MovieDetailView> {
     
-    let movie: Movie
-    var movieExist = false
+    private let movie: Movie
+    private var movieExist = false
     
     init(with movie: Movie) {
         self.movie = movie
@@ -25,7 +25,7 @@ class MovieDetailViewController: ViewController<MovieDetailView> {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func initComponents(){
+    private func initComponents(){
         do{
             movieExist = try DBController().checkForMovie(movie: movie)
         }
@@ -40,7 +40,7 @@ class MovieDetailViewController: ViewController<MovieDetailView> {
     }
     
     @objc
-    func barButtonTapped(){
+    private func barButtonTapped(){
         do{
             movieExist ? try removeMovie() : try addMovie()
         }
@@ -52,23 +52,23 @@ class MovieDetailViewController: ViewController<MovieDetailView> {
         self.popView()
     }
     
-    func addMovie()throws{
+    private func addMovie()throws{
         try DBController().addMovie(movie: movie)
     }
     
-    func removeMovie()throws{
+    private func removeMovie()throws{
         try DBController().removeMovie(movie: movie)
     }
     
-    func popView(){
+    private func popView(){
         self.navigationController?.popViewController(animated: true)
     }
     
-    func notifyObserver(){
+    private func notifyObserver(){
         NotificationCenter.default.post(name: Notification.Name("updateCartBadge"), object: nil)
     }
     
-    func showErrorAlert(title: String, message: String){
+    private func showErrorAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)

@@ -100,12 +100,12 @@ class MovieDetailView: UIView {
         downloadImage(movie: movie)
     }
     
-    func setImageConstraints(){
+    private func setImageConstraints(){
         let imageViewHeightConstraint = NSLayoutConstraint(item: movieImage, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 300)
         movieImage.addConstraint(imageViewHeightConstraint)
     }
     
-    func downloadImage(movie: Movie){
+    private func downloadImage(movie: Movie){
         let url = URL(string: "\(Networking().preferences?.baseUrlImage ?? "")\(movie.posterPath)")
         movieImage.kf.setImage(with: url)
         

@@ -50,8 +50,4 @@ class DBController {
         
         return movies
     }
-    
-    func removeAllMovies(){
-        
-    }
 }

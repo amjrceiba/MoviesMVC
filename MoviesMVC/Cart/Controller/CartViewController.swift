@@ -33,11 +33,11 @@ class CartViewController: ViewController<CartView> {
         loadMovies()
     }
     
-    func loadMovies(){
+    private func loadMovies(){
         movies = DBController().getMovies()
     }
     
-    func removeMovie(movie: Movie){
+    private func removeMovie(movie: Movie){
         do{
             try DBController().removeMovie(movie: movie)
         }
@@ -49,11 +49,11 @@ class CartViewController: ViewController<CartView> {
         self.loadMovies()
     }
 
-    func notifyObserver(){
+    private func notifyObserver(){
         NotificationCenter.default.post(name: Notification.Name("updateCartBadge"), object: nil)
     }
     
-    func showRemoveMovieAlert(title: String, message: String, movie: Movie){
+    private func showRemoveMovieAlert(title: String, message: String, movie: Movie){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { action in
             self.removeMovie(movie: movie)
@@ -62,7 +62,7 @@ class CartViewController: ViewController<CartView> {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func showErrorAlert(title: String, message: String){
+    private func showErrorAlert(title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
