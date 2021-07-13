@@ -25,7 +25,9 @@ class MoviesViewController: ViewController<MoviesView>{
     
     private func loadMovies(){
         Networking().fetchMovies { movies in
-            self.movies = movies
+            DispatchQueue.main.async {
+                self.movies = movies
+            }
         }
     }
 }
